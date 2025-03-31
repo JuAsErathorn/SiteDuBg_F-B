@@ -1,0 +1,5 @@
+package com.site.back.services;
+
+public interface BehaviorService {
+
+}

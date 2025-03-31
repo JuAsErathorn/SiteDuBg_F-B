@@ -1,0 +1,5 @@
+package com.site.back.models;
+
+public class Animal {
+
+}

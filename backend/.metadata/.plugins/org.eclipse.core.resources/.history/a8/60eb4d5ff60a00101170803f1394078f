@@ -1,0 +1,52 @@
+package com.site.back.services;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.site.back.models.Animal;
+import com.site.back.repositories.AnimalRepository;
+
+public class AnimalServiceImpl implements AnimalService {
+	
+	@Autowired
+	AnimalRepository animalRepository;
+
+	@Override
+	public Animal createAnimal(Animal a) {
+		animalRepository.save(a);
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Animal updateAnimal(Animal a) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void deleteAnimal(Animal a) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void deleteAnimalById(Long id) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public Animal findAnimalById(Long id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<Animal> findAllAnimals() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

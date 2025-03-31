@@ -1,0 +1,52 @@
+package com.site.back.services;
+
+import java.util.List;
+import java.util.Optional;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.site.back.models.Behavior;
+import com.site.back.repositories.BehaviorRepository;
+
+@Service
+public class BehaviorServiceImpl implements BehaviorService {
+	
+	@Autowired
+	BehaviorRepository behaviorRepository;
+
+	@Override
+	public Behavior createBehavior(Behavior b) {
+		return behaviorRepository.save(b);
+	}
+
+	@Override
+	public Behavior updateBehavior(Behavior b) {
+		return behaviorRepository.save(b);
+	}
+
+	@Override
+	public void deleteBehavior(Behavior b) {
+		behaviorRepository.delete(b);
+	}
+
+	@Override
+	public void deleteBehaviorById(Long id) {
+		behaviorRepository.deleteById(id);
+	}
+
+	@Override
+	public Behavior findBehaviorById(Long id) {
+		Optional<Behavior> tamp = behaviorRepository.findById(id);
+		if(tamp.isPresent()) {
+			return tamp.get();
+		}
+		return null;
+	}
+
+	@Override
+	public List<Behavior> findAllBehavior() {
+		return behaviorRepository.findAll();
+	}
+
+}

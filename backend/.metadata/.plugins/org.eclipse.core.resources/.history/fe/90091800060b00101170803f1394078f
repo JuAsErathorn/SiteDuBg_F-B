@@ -1,0 +1,7 @@
+package com.site.back.services;
+
+public class BehaviorService {
+	
+	Behavior createBehavior(Behavior b);
+
+}

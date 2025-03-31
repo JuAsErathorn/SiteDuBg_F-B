@@ -1,0 +1,7 @@
+package com.site.back.services;
+
+public interface AnimalService {
+	
+	Animal createAnimal(Animal a);
+
+}

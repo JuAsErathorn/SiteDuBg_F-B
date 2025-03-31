@@ -1,0 +1,10 @@
+package com.site.back.models;
+
+public class Behavior {
+	
+	private String name;
+	private String description;
+	private int iterations;
+	private String type;
+
+}

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<typeInfoHistroy>
+    <typeInfo handle="=demo/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.site.back.services{AnimalService.java[AnimalService" modifiers="513" timestamp="1743071275397"/>
+    <typeInfo handle="=demo/C:\/Users\/s10036\/.m2\/repository\/org\/springframework\/data\/spring-data-jpa\/3.4.4\/spring-data-jpa-3.4.4.jar=/maven.pomderived=/true=/=/maven.groupId=/org.springframework.data=/=/maven.artifactId=/spring-data-jpa=/=/maven.version=/3.4.4=/=/maven.scope=/compile=/=/maven.pomderived=/true=/&lt;org.springframework.data.jpa.repository(JpaRepository.class[JpaRepository" modifiers="1537" timestamp="1742995050254"/>
+    <typeInfo handle="=demo/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.site.back.services{BehaviorService.java[BehaviorService" modifiers="513" timestamp="1743078198544"/>
+</typeInfoHistroy>

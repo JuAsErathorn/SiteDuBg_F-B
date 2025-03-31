@@ -1,0 +1,47 @@
+/* Fond de la page */
+.ethogram-container {
+    background-color: #f4f4f4; /* Fond gris comme dans l'exemple */
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+/* Contenu central */
+.ethogram-content {
+    background-color: white; /* Fond blanc */
+    border-radius: 10px; /* Bords arrondis */
+    padding: 20px;
+    width: 80%;
+    max-width: 800px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre légère */
+    margin-bottom: 20px;
+}
+
+/* Titre */
+.ethogram-container h2 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Tableau */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #f8f8f8;
+    font-weight: bold;
+}
+
+tr:hover {
+    background-color: #f1f1f1;
+}

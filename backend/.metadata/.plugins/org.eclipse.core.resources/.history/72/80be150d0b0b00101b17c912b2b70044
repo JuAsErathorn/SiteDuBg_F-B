@@ -1,0 +1,38 @@
+package com.site.back.controllers;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.site.back.models.Behavior;
+import com.site.back.services.BehaviorServiceImpl;
+
+@RestController
+@RequestMapping("/api/behavior")
+public class BehaviorRestController {
+	
+	@Autowired
+	BehaviorServiceImpl behaviorService;
+	
+	@PostMapping("/add")
+	public Behavior createBehavior(@RequestBody Behavior b) {
+		return behaviorService.createBehavior(b);
+	}
+	
+	@GetMapping
+	public List<Behavior> getAllBehaviors(){
+		return behaviorService.findAllBehavior();
+	}
+	
+	@GetMapping("/{id}")
+	public Behavior getBehaviorById(@PathVariable Long id) {
+		return behaviorService.findBehaviorById(id);
+	}
+
+}

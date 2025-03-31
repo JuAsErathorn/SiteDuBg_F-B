@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Monde des Animaux</title>
+  <!--link rel="stylesheet" href="index.css"-->
+</head>
+
+<body>
+  <header>
+    <h1>Bienvenue dans le Monde des Animaux</h1>
+  </header>
+
+  <main>
+    <section class="animal-section">
+      <img id="dogImage" src="chien.jpg" alt="Chien">
+      <p id="dogText">Le chien est le meilleur ami de l'homme.</p>
+      <button (click)="changeDog()">En savoir plus</button>
+    </section>
+
+    <section class="animal-section">
+      <img id="catImage" src="chat.jpg" alt="Chat">
+      <p id="catText">Le chat est un animal indépendant et mystérieux.</p>
+      <button (click)="changeCat()">En savoir plus</button>
+    </section>
+
+    <section class="animal-section">
+      <img id="birdImage" src="oiseau.jpg" alt="Oiseau">
+      <p id="birdText">Les oiseaux sont les maîtres du ciel.</p>
+      <button (click)="changeBird()">En savoir plus</button>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2023 Monde des Animaux. Tous droits réservés.</p>
+  </footer>
+
+  <!--script src="index.js"-->
+</body>
+
+</html>

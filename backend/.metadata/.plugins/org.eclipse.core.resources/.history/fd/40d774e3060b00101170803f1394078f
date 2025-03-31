@@ -1,0 +1,51 @@
+package com.site.back.services;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.site.back.models.Behavior;
+import com.site.back.repositories.BehaviorRepository;
+
+public class BehaviorServiceImpl implements BehaviorService {
+	
+	@Autowired
+	BehaviorRepository behaviorRepository;
+
+	@Override
+	public Behavior createBehavior(Behavior b) {
+		// TODO Auto-generated method stub
+		return behaviorRepository.save(b);
+	}
+
+	@Override
+	public Behavior updateBehavior(Behavior b) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void deleteBehavior(Behavior b) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void deleteBehaviorById(Long id) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public Behavior findBehaviorById(Long id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<Behavior> findAllBehavior() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

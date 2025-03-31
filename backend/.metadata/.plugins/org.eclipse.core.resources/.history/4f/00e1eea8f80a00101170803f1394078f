@@ -1,0 +1,41 @@
+package com.site.back.models;
+
+import java.util.List;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.JoinTable;
+import jakarta.persistence.ManyToMany;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+@Entity
+public class Animal {
+
+	@Id
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
+	private Long id;
+	private String name;
+	private String pictureName;
+	
+	@ManyToMany
+	@JoinTable(
+	        name = "animal_behavior", // Nom de la table de jointure
+	        joinColumns = @JoinColumn(name = "id"), // Colonne pour l'animal
+	        inverseJoinColumns = @JoinColumn(name = "id") // Colonne pour le comportement
+	    )
+	private List<Behavior> behaviors;
+	
+	public Animal(String name, String pictureName, List<Behavior> behaviors) {
+		this.name = name;
+		this.pictureName = pictureName;
+		this.behaviors = behaviors;
+	}
+	
+}

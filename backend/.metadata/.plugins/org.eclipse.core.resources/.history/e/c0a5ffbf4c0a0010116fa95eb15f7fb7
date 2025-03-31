@@ -1,0 +1,9 @@
+package com.site.back.models;
+
+public class Animal {
+
+	private Long id;
+	private String name;
+	
+	private List<Behavior> behaviors;
+}

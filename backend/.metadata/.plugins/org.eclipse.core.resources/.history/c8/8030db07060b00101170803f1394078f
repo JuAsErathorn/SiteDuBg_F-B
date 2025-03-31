@@ -1,0 +1,9 @@
+package com.site.back.services;
+
+import com.site.back.models.Behavior;
+
+public class BehaviorService {
+	
+	Behavior createBehavior(Behavior b);
+
+}

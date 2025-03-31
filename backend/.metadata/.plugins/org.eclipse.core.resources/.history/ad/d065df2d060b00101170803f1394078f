@@ -1,0 +1,11 @@
+package com.site.back.services;
+
+import com.site.back.models.Behavior;
+
+public interface BehaviorService {
+	
+	Behavior createBehavior(Behavior b);
+	Behavior updateBehavior(Behavior b);
+	void deleteBehavior(Behavior b);
+
+}

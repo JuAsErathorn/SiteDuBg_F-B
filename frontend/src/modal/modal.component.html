@@ -1,0 +1,12 @@
+<h2>Ma Modale</h2>
+<mat-dialog-content>
+    <p>Message reçu depuis le parent : <strong>{{ messageFromParent }}</strong></p>
+    <p>Veuillez entrer du texte :</p>
+    <mat-form-field appearance="fill">
+        <input matInput [(ngModel)]="inputText" placeholder="Entrez du texte">
+    </mat-form-field>
+</mat-dialog-content>
+<mat-dialog-actions>
+    <button mat-button (click)="onCancel()">Annuler</button>
+    <button mat-button (click)="onSubmit()" cdkFocusInitial>Valider</button>
+</mat-dialog-actions>
