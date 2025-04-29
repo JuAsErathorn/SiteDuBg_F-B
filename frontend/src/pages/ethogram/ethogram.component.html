@@ -1,0 +1,56 @@
+<div class="ethogram-container">
+    <h2>Éthogramme du Chien</h2>
+    <div class="ethogram-content">
+        <table>
+            <thead>
+                <tr>
+                    <th>Comportement</th>
+                    <th>Description</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                @for (bh of misc_behaviors; track $index) {
+                    <tr>
+                        <td>{{ bh.name }}</td>
+                        <td>{{ bh.description }}</td>
+                        <td>
+                            <a class="btn btn-success" (click)="addBehavior(bh)">Ajouter</a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+    <h2>Comportement enregistrés</h2>
+    <div class="ethogram-content">
+        @if (saved_behaviors.length > 0) {
+            <table>
+                <thead>
+                    <tr>
+                        <th>Comportement</th>
+                        <th>itérations</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @for (bh of saved_behaviors; track $index) {
+                        <tr>
+                            <td>{{ bh.name }}</td>
+                            <td>{{ bh.iterations }}</td>
+                            <td>
+                                <a class="btn btn-danger" (click)="removeBehavior(bh)">Supprimer</a>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        }
+        @else {
+            <h4>Aucun comportement enregistré</h4>
+        }
+    </div>
+    @if (saved_behaviors.length > 0) {
+        <a class="btn btn-success" (click)="sendReport()">Envoyer le rapport</a>
+    }
+</div>

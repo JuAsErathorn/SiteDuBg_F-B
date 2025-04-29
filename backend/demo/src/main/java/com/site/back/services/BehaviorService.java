@@ -1,0 +1,16 @@
+package com.site.back.services;
+
+import java.util.List;
+
+import com.site.back.models.Behavior;
+
+public interface BehaviorService {
+	
+	Behavior createBehavior(Behavior b);
+	Behavior updateBehavior(Behavior b);
+	void deleteBehavior(Behavior b);
+	void deleteBehaviorById(Long id);
+	Behavior findBehaviorById(Long id);
+	List<Behavior> findAllBehavior();
+
+}
